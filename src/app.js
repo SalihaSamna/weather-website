@@ -72,5 +72,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("sever is up and running in" + port)
+    console.log("sever is up and running in " + port)
 })
