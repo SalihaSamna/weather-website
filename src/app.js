@@ -71,6 +71,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("sever is up and running")
+app.listen(port, () => {
+    console.log("sever is up and running in" + port)
 })
