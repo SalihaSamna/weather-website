@@ -1,5 +1,6 @@
 body {
-    color: #555555;
+    background-color: hsla(182, 96%, 36%, 0.282);
+    color: navy;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 600px;
     margin: 0 auto;

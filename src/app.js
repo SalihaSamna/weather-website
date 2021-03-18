@@ -29,9 +29,9 @@ app.get('/about', (req, res) => {
 })
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help Contact Us',
+        title: 'Contact Us',
         name: ' Created by Saliha Samna',
-        helptext: 'Contact saliha samna for more information'
+        helptext: 'Contact saliha samna @ salihasamna@gmail.com for more information'
     })
 })
 app.get('/weather', (req, res) => {
@@ -72,5 +72,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("sever is up and running in " + port)
+    console.log("server is up and running in " + port)
 })
