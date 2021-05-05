@@ -2,22 +2,23 @@ const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 1000
 const geocode = require('./utils/geocode.js')
-const forecast = require('./utils/forecast.js')
-const port = process.env.PORT || 3000
+const forecast = require('./utils/forecast')
 
-//console.log(path.join(__dirname, '../public'))
-const pathTohtml = path.join(__dirname, '../public')
+const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
-app.use(express.static(pathTohtml))
+app.set('view engine', 'ejs')
 app.set('view engine', 'hbs')
-app.set('views', viewsPath);
+app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
+
+app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
+        title: 'Trucking Weather App',
         name: 'Created by saliha samna'
     })
 })
